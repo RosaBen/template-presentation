@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation Interactive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="presentation"></div>
+    <div id="footer">
+        <button class="nav-bubble" id="prevSlide" onclick="navigateSlide(-1)">←</button>
+        <button class="nav-bubble" id="nextSlide" onclick="navigateSlide(1)">→</button>
+        <button class="nav-bubble" id="prevContent" onclick="navigateContent(-1)">↑</button>
+        <button class="nav-bubble" id="nextContent" onclick="navigateContent(1)">↓</button>
+        <button class="nav-bubble" id="toggleForm" onclick="toggleForm()">Init</button>
+    </div>
+    <div id="add-content-form" style="display: none;">
+        <select id="content-type">
+            <option value="text">Texte</option>
+            <option value="image">Image</option>
+            <option value="link">Lien</option>
+            <option value="video">Vidéo</option>
+        </select>
+        <select id="text-format" style="display: none;">
+            <option value="p">Paragraphe (p)</option>
+            <option value="h1">Titre 1 (h1)</option>
+            <option value="h2">Titre 2 (h2)</option>
+            <option value="h3">Titre 3 (h3)</option>
+            <option value="h4">Titre 4 (h4)</option>
+            <option value="h5">Titre 5 (h5)</option>
+            <option value="h6">Titre 6 (h6)</option>
+        </select>
+        <input type="text" id="content-value" placeholder="Valeur du contenu">
+        <button onclick="addContent()">Ajouter</button>
+    </div>
+    <script src="script.mjs"></script>
+</body>
+</html>
